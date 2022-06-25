@@ -7,6 +7,12 @@
 	<link href="css/style.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/global/favicon.ico">
   <script src="https://kit.fontawesome.com/4c31a4ea6b.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 	
 <!-- Website Body -->
@@ -22,7 +28,7 @@
       <span class="name-text">The ALChemists</span>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="https://team3405.info" target="_blank">
+      <a class="navbar-item-inner flexbox-left" href="javascript:void(0)">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <i class="fa-solid fa-house"></i>
         </div>
@@ -62,7 +68,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
+      <a class="navbar-item-inner flexbox-left" href="join/index.html">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <i class="fa-solid fa-handshake"></i>
         </div>
@@ -82,10 +88,71 @@
 
 <!-- Main -->
 <main id="main" class="flexbox-col">
-  <img src="https://team3405.info/images/archives/2018/team_picture.jpg" alt="shainblumphoto">
+  <img id="image" src="https://team3405.info/images/archives/2018/team_picture.jpg" alt="shainblumphoto">
   <h2>Lorem ipsum!</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum corporis, rerum doloremque iste sed voluptates omnis molestias molestiae animi recusandae labore sit amet delectus ad necessitatibus laudantium qui! Magni quisquam illum quaerat necessitatibus sint quibusdam perferendis! Aut ipsam cumque deleniti error perspiciatis iusto accusamus consequuntur assumenda. Obcaecati minima sed natus?</p>
+  
+  <br />
+  
+  <!-- Sponsor Carousel -->
+  <div class="demo-row">
+    <div class="container" id="id-sponsors">
+      <div class="text-center">
+      <h2 style="margin:20px 0;color:#fff;">Our Sponsors & Partners (Thank You!)</h2>
+    </div>
+    <div id="sponsor-carousel" class="carousel slide" data-ride="carousel"> 
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="row">
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature"><img id="sponsor-logo" alt="Nebo School District" src="images/sponsors/NSD_logo.png"/></div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature"><img id="sponsor-logo" alt="Nebo's Advanced Learning Center" src="images/sponsors/ALC_logo.png"/></div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature"><img id="sponsor-logo" alt="CentraCom" src="images/sponsors/CentraCom-blue.png"/></div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature"><img id="sponsor-logo-vertical" alt="The Gene Haas Foundation" src="images/sponsors/GeneHaas.png"/></div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature"><img id="sponsor-logo-vertical" alt="Nebo's Bottle CAPS Bus" src="images/sponsors/bottle-CAPS.png" style="width: 160px;" /></div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature"><img id="sponsor-logo" alt="Utah's STEM Action Center" src="images/sponsors/utah-stem-action-center.png" /></div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature"><img id="sponsor-logo" alt="Blackout Fabrication" src="https://itagroup.hs.llnwd.net/o40/csg/pse-demo/channel-incentive/logos/logo3.jpg" style="width: 160px;" /></div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature"><img id="sponsor-logo" alt="YOUR BUSINESS HERE: See Sponsor page!" src="images/sponsors/sponsor-us.png" style="width: 160px;" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+  <br />
+
+    Hello there
 </main>
+
+<!-- Carousel Slider -->
+<script src="javascript/myscripts.js"></script>
 
 	</body>
 	</html>
