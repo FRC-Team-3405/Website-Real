@@ -1,0 +1,18 @@
+Branding Reference Guide: ALC Logo w/Triangles:
+Triangle Color: 
+- HEX: #385caa
+- RGB: rgba(56,92,170,255)
+
+Outer 'A' Triangle: 
+- HEX: #31323c
+- RGB: rgba(49,50,60,255)
+
+Keywords (In quotes, with commas seperating each keyword):
+<meta name="description" content="The official page of Nebo School District's FIRST Robotics Team at the Advanced Learning Center.">
+<meta name="keywords" content="ALC, alc, Advanced Learning Center, advanced learning center, utah, 
+salem utah, salem, ALC Nebo, alc nebo, nebo school district, nebo school, nebo district, nebo utah, utah county, stem, STEM Action Center, 
+centracom, utah science, science, technology, engineering, math, FIRST, first, FIRST Robotics, first robotics competition, frc, 2010, 2011, 2012, 2013,
+2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, programming, computer, robot, innovation, ducks, duck, quack, kraken, quacken, 
+fun, interesting, robotics team, alc robotics, alc robot, alc robotics class, class, club, after school, after-school, after-school club, after school club, 
+first inspires, woody flowers, dean kamen, salem, Salem, salem utah, salem ut, ut, students, teachers, student, teacher, parent, parents, exciting">
+<meta name="author" content="Samuel Whitaker">

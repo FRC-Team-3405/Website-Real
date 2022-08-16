@@ -107,24 +107,7 @@ a:visited {
     color: hsl(var(--quite-gray));
 }
 
-/* =========
-    Buttons
-   ========= */
 
-button {
-    padding: .8em 1.2em;
-    border: 1px solid hsl(var(--black));
-    background-color: hsl(var(--background));
-    font-size: var(--paragraph);
-    cursor: pointer;
-    outline: none;
-}
-button:focus {
-    box-shadow:
-            0 0 0 2px hsl(var(--black)),
-            0 0 0 3px hsl(var(--white));
-    border: 1px solid transparent;
-}
 
 /* =======
     Lists
@@ -387,8 +370,11 @@ select {
     box-shadow: 5px 5px 15px;
 }
 #main > h2 {
-    width: 80%;
-    max-width: 80%;
+    text-decoration: bold;
+    color: black;
+    text-shadow: 1px 1px white, 3px 3px hsl(var(--alc-blue));
+    padding-top: 25px;
+    padding-bottom: 35px;
 }
 #main > p {
     width: 80%;
@@ -446,22 +432,160 @@ select {
     color: white;
     text-shadow: 4px 4px hsl(var(--alc-blue)), 6px 6px hsl(var(--alc-grey));
 }
+/* TEAM PAGE */
+.cards {
+    width: 70%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    padding: 5px;
+}
+
+.coach {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 10px;
+} 
+.ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 20;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#2989d8 0%, #385CA8 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+}
+.ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #385CA8;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #385CA8;
+}
+.ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #385CA8;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #385CA8;
+}
+.card-cropped {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.container {
+    text-align: center;
+    padding: 2px 16px;
+    padding-bottom: 16px;
+}
+.container > p {
+    font-size: 25px;
+    padding-bottom: 25px;
+}
+.container > button {
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    height: 50px;
+    background-color: hsl(var(--alc-blue));
+    border-radius: 5px;
+    color: white;
+    font-family: var(--font-main);
+    border: transparent;
+}
+.container > button:hover {
+    background-color: hsl(var(--alc-grey));
+    box-shadow: 0 8px 16px 0 hsl(var(--alc-grey));
+    cursor: pointer;
+}
 
 /* "JOIN" PAGE */
-.header-container {
-    position: relative;
-    text-align: center;
-    color: white;
+.joinHeader {
     width: 100%;
-    
+    height: 300px;
+    display: flex;
+    background: hsl(var(--alc-blue));
+    color: #fff;
+    justify-content: center;
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
 }
-.header-container-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 100px;
-    text-shadow: 4px 4px hsl(var(--alc-blue)), 6px 6px hsl(var(--alc-grey));
+
+.left {
+    width: 100%;
+    font-size: 40px;
+    padding-right: 10px;
+    left: 100%;
+    margin: auto;
+    text-align: right;
+}
+
+.right {
+    width: 100%;
+    margin: auto;
+    text-shadow: 3px 3px 3px 3px hsl(var(--alc-grey));
+}
+
+/* // Carousel Specific Styles */
+
+#wordCarousel {
+  height: 50px;
+  overflow: hidden;
+}
+
+.carouselSlide {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 100%; /* line-height will make sure the height is equal to 36px, font-size alone isn't enough  */
+}
+
+#wordCarousel > div {
+  height: 100%;
+  animation: carousel 3s infinite;
+  /* // animation-delay: 2s; */
+}
+
+/* // Animation starts at 80% to create delay */
+@keyframes carousel {
+  0% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 /* =============
@@ -511,6 +635,13 @@ select {
     .view-width {
         width: 80%;
     }
+    .cards {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+    }
 }
 @media only screen and (max-width: 1220px) {
     .view-width {
@@ -541,5 +672,12 @@ select {
     }
     #sponsor-logo {
         max-width: 140px;
+    }
+    .cards {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
     }
 }

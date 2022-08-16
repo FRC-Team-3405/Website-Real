@@ -1,0 +1,44 @@
+Home
+	- Home Page; index.html
+Projects (Community Outreach?)
+	- Andre the Giant (current Robot); "Our Robot"
+	- Bottle Caps Bus; "Fundraising / Marketing Plans"
+	- FIRST Programming Resources; "Accessible Help for All"
+Resources
+	- Programming Resources; "Helpful and to the point"
+	- Engineering Resources; Source Files? Compiling a full robot CAD? etc.
+	- Marketing Resources
+		- Brand Guide (Logo Files, HEX Values, HSL values, etc.)
+		- Sponsor Files (for designing T-Shirts, Banners, etc.)
+		- Videos
+		- Video Intro/Outro Files
+		- Links to Grant Applications (NASA, etc.)
+	- Driver Resources
+		- XRC Simulator
+		- Blank Controller Maps to Fill Out
+		- Gameplan Booklet(s)
+	- Sponsor Resources
+		- Media Package
+		- "What we do with Sponsorship Money" (1st Robot, 2nd Scholarships, 3rd Team Support (Lodging, Meals, etc.))
+Team
+	- Mission Statement
+	- Contact Cards (Eastmond, Mentors, Team Captain)
+<div class="contact-coach">Like many great tech start-ups, it all started in a garage. When a student approached Mr. Robert Eastmond about 
+        starting a FIRST Robotics team in 2010, he readily offered his garage and experience as a programmer for one year.
+        As many FIRST Alumni know, its hard to leave! One year soon became two, then three, and more... Our team has since moved out of Eastmond's garage and into various locations around Nebo School District, 
+        from Maple Mountain High School to our current home at Nebo's Advanced Learning Center in Salem, Utah. Mr. Eastmond is still coaching the team, and eagerly awaiting the next season!
+      </div>
+History
+	- Archive Pages (2010-Present) * 13
+Join
+	- Why FIRST?
+	- Why Nebo's ALC?
+	- Alumni Statistics (Team and FIRST)
+	- 
+Sponsor
+	- Why FIRST?
+	- Why the ALC?
+	- Our Story
+	- How you can help
+	- Sponsor Package / Tier levels Explanation
+	- 

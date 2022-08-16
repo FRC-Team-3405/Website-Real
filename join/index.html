@@ -46,7 +46,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
+      <a class="navbar-item-inner flexbox-left" href="../team/index.html">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <i class="fa-solid fa-people-group"></i>
         </div>
@@ -82,13 +82,59 @@
 
 <!-- Main -->
 <main id="main" class="flexbox-col">
-  <div class="header-container">
-      <img src="../images/media/Team2022.jpg" alt="2022 Team" style="width:100%;">
-      <div class="header-container-text">Are you ready?</div>
+  <!-- Header -->
+  <div class="joinHeader">
+    <div class="left">Get ready to</div>
+    <div class="right">
+      <div id="wordCarousel">
+        <div>
+          <div class="carouselSlide">Inspire</div>
+          <div class="carouselSlide">Explore</div>
+          <div class="carouselSlide">Succeed</div>
+          <div class="carouselSlide">Discover</div>
+          <div class="carouselSlide">Excel</div>
+          <div class="carouselSlide">Create</div>
+          <div class="carouselSlide">Lead</div>
+          <div class="carouselSlide">Innovate</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <h2>Are you ready for more awesome?</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum corporis, rerum doloremque iste sed voluptates omnis molestias molestiae animi recusandae labore sit amet delectus ad necessitatibus laudantium qui! Magni quisquam illum quaerat necessitatibus sint quibusdam perferendis! Aut ipsam cumque deleniti error perspiciatis iusto accusamus consequuntur assumenda. Obcaecati minima sed natus?</p>
+  <script>
+    let carousel = document.querySelector("#wordCarousel div");
+
+carousel.addEventListener("animationiteration", () => {
+  carousel.appendChild(carousel.children[0]);
+});
+  </script>
+  <!-- Hook -->
+  <!-- <h2>YOU are the future of our world!</h2> -->
+  <br />
+  <p><b>Welcome to FIRST, a community of students, parents, and teachers specifically driven by a passion
+    for learning, scholarship opportunities, real-life career and business applications, and competitive sport!
+    As a FIRST student, you will experience first-hand the impact STEM (Science, Technology,
+    Engineering, and Math) has on our community, society, and world. Join the next generation
+    of leaders in the top global industries as they compete in an internationally-recognized 
+    and acclaimed Robotics Competition - this is FIRST, For Inspiration and Recognition of Science and Technology.
+  </b>
+  </p>
+  <!-- Helpful Resources for New Students (Quick Links) -->
+
+  <!-- Recruiting Video -->
+
+  <!-- Opportunities (Competition, Soda Bus, Recruiting, etc.) -->
+
+  <!-- Alumni/Senior/Veteran Quotes to spice it up -->
+
+  <!-- Our Mission (& How it aligns with the missions of Nebo and the ALC) -->
+  <!-- FAQs -->
+
+    <!-- Position Descriptions (Pre-Competition) -->
+
+    <!-- Position Descriptions (At Competition) -->
+
+  <!-- Submission Form: Join the FIRST Community -->
 </main>
 
 	</body>
-	</html>
+  </html>
