@@ -240,7 +240,7 @@ select {
 #navbar {
     top: 0;
     padding: 0;
-    width: 5em;
+    width: 4.25em;
     height: 100vh;
     position: fixed;
     background-color: hsl(var(--background-secondary));
@@ -248,6 +248,7 @@ select {
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 100;
+    
 }
 #navbar:hover {
     width: 16em;
@@ -361,7 +362,7 @@ select {
 
 #main {
     font-family: var(--font-main);
-    margin: 0 0 0 5em;
+    margin: 0 0 0 4.25em;
     min-height: 50vh;
 }
 #image {
