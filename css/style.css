@@ -389,6 +389,73 @@ select {
     box-shadow: 0px 10px 10px #888888;
   }
   
+
+/* Video Player */
+#videoPlayer {
+    background-color: #000;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    height: 480px;
+    width: 100%;
+    margin: 1em auto;
+}
+  #videoPlayer:after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-height: 100px;
+    text-align: left;
+    padding: 1em;
+    font-size: 1.2em;
+    color: #fff;
+    transition: opacity 0.7s ease-in-out;
+  }
+  #videoPlayer:hover:after {
+    opacity: 0;
+  }
+  #videoPlayer .thumb {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+  }
+  #videoPlayer .thumb:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  #videoPlayer .play {
+    filter: alpha(opacity=90);
+    opacity: 0.9;
+    height: 97px;
+    left: 50%;
+    margin-left: -38px;
+    margin-top: -38px;
+    position: absolute;
+    top: 50%;
+    width: 136px;
+    background: url("http://i.imgur.com/TxzC70f.png");
+    background-repeat: no-repeat;
+  }
+  #videoPlayer.loaded:after {
+    display: none;
+  }
+
 /*Implement*/
 .sponsor-feature {
     background-color: #fff;

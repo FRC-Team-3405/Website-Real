@@ -88,10 +88,42 @@
 
 <!-- Main -->
 <main id="main" class="flexbox-col">
-  <img id="image" src="https://team3405.info/images/archives/2018/team_picture.jpg" alt="shainblumphoto">
-  <h2>Lorem ipsum!</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum corporis, rerum doloremque iste sed voluptates omnis molestias molestiae animi recusandae labore sit amet delectus ad necessitatibus laudantium qui! Magni quisquam illum quaerat necessitatibus sint quibusdam perferendis! Aut ipsam cumque deleniti error perspiciatis iusto accusamus consequuntur assumenda. Obcaecati minima sed natus?</p>
-  
+
+  <!-- Video Player -->
+  <div id="videoPlayer" data-title="FIRST Robotics Is...." data-id="wSA6InzFAZE">
+    <a title="Click to play video First Is...."> 
+    <img class="thumb" alt="FIRST Is... Video" src="images/media/Team2022.jpg" />
+    <span class="play"></span>
+    </a>
+  </div> 
+  <!-- JavaScript for Video Player -->
+  <script>
+    if (document.querySelector("#videoPlayer")) {
+      document.querySelector("#videoPlayer a").addEventListener("click", playVideo);
+    }
+    function playVideo() {
+      var player = document.getElementById("videoPlayer");
+      var id = player.getAttribute("data-id");
+      player.classList.add("loaded");
+      var src =
+      "https://www.youtube.com/embed/" +
+      id +
+      "?autoplay=1&autohide=1&rel=0&modestbranding=1&showinfo=0&border=0&wmode=opaque&theme=light&iv_load_policy=3";
+      var iframe =
+      "<iframe width='100%' height='100%' src='" +
+      src +
+      "' scrolling='no frameborder='0' allowfullscreen></iframe>";
+      player.innerHTML = iframe;
+      return false;
+    }
+  </script>
+
+  <br />
+
+  <!-- Countdown to the Next Important Event -->
+  <!-- Event List: Interest Meeting (November), Kickoff (January), Competition (March/April) -->
+  <!-- Kickoff Countdown (Preseason) -->
+
   <br />
   
   <!-- Sponsor Carousel -->
