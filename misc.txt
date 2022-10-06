@@ -20,7 +20,7 @@ Resources
 	- Sponsor Resources
 		- Media Package
 		- "What we do with Sponsorship Money" (1st Robot, 2nd Scholarships, 3rd Team Support (Lodging, Meals, etc.))
-Team
+Team (Changed to 'About Us)
 	- Mission Statement
 	- Contact Cards (Eastmond, Mentors, Team Captain)
 <div class="contact-coach">Like many great tech start-ups, it all started in a garage. When a student approached Mr. Robert Eastmond about 
@@ -28,7 +28,7 @@ Team
         As many FIRST Alumni know, its hard to leave! One year soon became two, then three, and more... Our team has since moved out of Eastmond's garage and into various locations around Nebo School District, 
         from Maple Mountain High School to our current home at Nebo's Advanced Learning Center in Salem, Utah. Mr. Eastmond is still coaching the team, and eagerly awaiting the next season!
       </div>
-History
+History (Now a subsection of 'About Us')
 	- Archive Pages (2010-Present) * 13
 Join
 	- Why FIRST?
