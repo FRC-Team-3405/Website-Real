@@ -89,26 +89,7 @@
     </a>
   </div> 
   <!-- JavaScript for Video Player -->
-  <script>
-    if (document.querySelector("#videoPlayer")) {
-      document.querySelector("#videoPlayer a").addEventListener("click", playVideo);
-    }
-    function playVideo() {
-      var player = document.getElementById("videoPlayer");
-      var id = player.getAttribute("data-id");
-      player.classList.add("loaded");
-      var src =
-      "https://www.youtube.com/embed/" +
-      id +
-      "?autoplay=1&autohide=1&rel=0&modestbranding=1&showinfo=0&border=0&wmode=opaque&theme=light&iv_load_policy=3";
-      var iframe =
-      "<iframe width='100%' height='100%' src='" +
-      src +
-      "' scrolling='no frameborder='0' allowfullscreen></iframe>";
-      player.innerHTML = iframe;
-      return false;
-    }
-  </script>
+  <script src="javascript/videoPlayer.js"></script>
 
   <br />
 
@@ -116,7 +97,7 @@
   <div class="mainPageCountdown">
     <div class="countdownClock">
       <div class="clock-container">
-        <h1 id="headline">COUNTDOWN TO KICKOFF</h1>
+        <h1 id="headline">2023 SEASON COUNTDOWN</h1>
         <div id="countdown">
           <ul class="clockList">
             <li class="clockList"><span id="days"></span>Days</li>
@@ -200,14 +181,67 @@
     </div>
     </div>
     </div>
-
+    <!-- Carousel Slider Script -->
+    <script src="javascript/myscripts.js"></script>
   <br />
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">The ALChemists are a FIRST Robotics Team located at Nebo's Advanced Learning Center in Salem, Utah. We began as the Golden Eagle Bots at Maple Mountain High School in 2010 under the direction of Mr. Robert Eastmond. The team was an FRC Utah Regional Finalist their rookie year and have since been regional finalists three times (2011, 2014, and 2015, respectively). The program has expanded to allow participation of all students in Nebo School District and regularly participates in school and community events. </p>
+        </div>
 
-    Hello there
+        <div class="col-xs-6 col-md-3">
+          <h6>Resources</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/category/c-language/">Programming</a></li>
+            <li><a href="http://scanfcode.com/category/front-end-development/">Engineering</a></li>
+            <li><a href="http://scanfcode.com/category/back-end-development/">Marketing</a></li>
+            <li><a href="http://scanfcode.com/category/java-programming-language/">Scout Team</a></li>
+            <li><a href="http://scanfcode.com/category/templates/">Alumni</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Parents</a></li>
+            <li><a href="http://scanfcode.com/category/templates/">Mentors</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Join our Team</a></li>
+            <li><a href="http://scanfcode.com/privacy-policy/">Sponsor Us</a></li>
+            <li><a href="http://scanfcode.com/sitemap/">Our Mission</a></li>
+            <li><a href="#">Press Releases</a></li>
+            <li><a href="https://www.nebo.edu/">Nebo School District</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022  
+       <a href="#">ALC Robotics</a>. <a href="https://www.nebo.edu/pubpolicy/"> [District Policy & Non-Discrimination Notice] </a>
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="https://www.facebook.com/AdvancedLearningCenterALC/" target="new"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="https://www.instagram.com/alcrobotics/" target="new"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="dribbble" href="https://www.github.com/FRC-Team-3405/" target="new"><i class="fa fa-github"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/school/nebo-advanced-learning-center/" target="new"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
 </main>
 
-<!-- Carousel Slider -->
-<script src="javascript/myscripts.js"></script>
 
 	</body>
 	</html>
