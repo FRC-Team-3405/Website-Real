@@ -21,7 +21,7 @@
   
           //do something later when date is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "It's Competition Day!";
+            document.getElementById("headline").innerText = "It's Competition Time!";
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
