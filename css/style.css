@@ -449,7 +449,7 @@ select {
     position: absolute;
     top: 50%;
     width: 136px;
-    background: url("http://i.imgur.com/TxzC70f.png");
+    background: url("../images/media/video/playbutton.png");
     background-repeat: no-repeat;
   }
   #videoPlayer.loaded:after {
