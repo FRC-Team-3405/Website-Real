@@ -80,7 +80,68 @@
 
 <!-- Main -->
 <main id="main" class="flexbox-col">
-
+  <!-- ALChemists Bubbler Box -->
+  <div class="bubble-box">
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+    <!-- TEXT -->
+    <div id="morph-text">
+      <span id="text1"></span>
+      <span id="text2"></span>
+    </div>
+    <!-- SVG -->
+    <svg id="filters">
+      <defs>
+        <filter id="threshold">
+          <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 255 -140" />
+        </filter>
+      </defs>
+    </svg>
+    <script src="javascript/morphText.js"></script>
+  </div>
+  <!-- Event Grid title -->
+  <br />
+  <h1>Upcoming Events & Meetings:</h1> 
+  <br />
+  <!-- Calendar & Countdown Responsive Grid -->
+  <div class="responsive_events">
+    <!-- Countdown to the Next Important Event -->
+    <div class="mainPageCountdown">
+      <div class="countdownClock">
+        <div class="clock-container">
+          <h1 id="headline">2023 UTAH REGIONAL</h1>
+          <div id="countdown">
+            <ul class="clockList">
+              <li class="clockList"><span id="days"></span>Days</li>
+              <li class="clockList"><span id="hours"></span>Hours</li>
+              <li class="clockList"><span id="minutes"></span>Minutes</li>
+              <li class="clockList"><span id="seconds"></span>Seconds</li>
+            </ul>
+          </div>
+          <div id="content" class="emoji">
+            <span>⚡</span>
+            <span>⚡</span>
+            <span>⚡</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Change the countdown date in the file below -->
+    <script src="javascript/countdown.js"></script>
+    <!-- Calendar -->
+    <iframe src="https://embed.styledcalendar.com/#poVk4R983bKEtnHyPA4N" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+    <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+  </div>
   <!-- Video Player -->
   <div id="videoPlayer" data-title="FIRST Robotics Is...." data-id="wSA6InzFAZE">
     <a title="Click to play video First Is...."> 
@@ -90,47 +151,13 @@
   </div> 
   <!-- JavaScript for Video Player -->
   <script src="javascript/videoPlayer.js"></script>
-
-  <br />
-
-  <!-- Countdown to the Next Important Event -->
-  <div class="mainPageCountdown">
-    <div class="countdownClock">
-      <div class="clock-container">
-        <h1 id="headline">2023 UTAH REGIONAL</h1>
-        <div id="countdown">
-          <ul class="clockList">
-            <li class="clockList"><span id="days"></span>Days</li>
-            <li class="clockList"><span id="hours"></span>Hours</li>
-            <li class="clockList"><span id="minutes"></span>Minutes</li>
-            <li class="clockList"><span id="seconds"></span>Seconds</li>
-          </ul>
-        </div>
-        <div id="content" class="emoji">
-          <span>⚡</span>
-          <span>⚡</span>
-          <span>⚡</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Change the countdown date in the file below -->
-  <script src="javascript/countdown.js"></script>
-  <!-- Event List: Interest Meeting (November), Kickoff (January), Competition (March/April) -->
   <!-- Kickoff Countdown (Preseason) -->
   <!-- Quick Links? -->
-
-  <br />
-
-  <!-- Calendar -->
-  <iframe src="https://embed.styledcalendar.com/#poVk4R983bKEtnHyPA4N" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
-  <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
-  
   <!-- Sponsor Carousel -->
   <div class="demo-row">
     <div class="container" id="id-sponsors">
       <div class="text-center">
-      <h2 style="margin:20px 0;color:#fff;">Our Sponsors & Partners (Thank You!)</h2>
+      <h2 style="margin:20px 0;color:#fff;">Our Sponsors & Partners</h2>
     </div>
     <div id="sponsor-carousel" class="carousel slide" data-ride="carousel"> 
       <!-- Indicators -->
@@ -165,11 +192,11 @@
           <div class="row">
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
-                <img id="sponsor-logo-vertical" alt="Nebo's Bottle CAPS Bus" src="images/sponsors/bottle-CAPS.png" style="width: 160px;" /></div>
+                <img id="sponsor-logo" alt="Department of Defense STEM Initiative" src="images/sponsors/Full_Color_DoDSTEM_Logo.png" /></div>
             </div>
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
-                <img id="sponsor-logo" alt="Utah's STEM Action Center" src="images/sponsors/utah-stem-action-center.png" /></div>
+                <img id="sponsor-logo-vertical" alt="Nebo's Bottle CAPS Bus" src="images/sponsors/bottle-CAPS.png" style="width: 160px;" /></div>
             </div>
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
@@ -227,7 +254,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2022  
+          <p class="copyright-text">Copyright &copy; 2023  
        <a href="#">ALC Robotics</a>. <a href="https://www.nebo.edu/pubpolicy/"> [District Policy & Non-Discrimination Notice] </a>
           </p>
         </div>
