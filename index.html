@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-	<!-- Header Information -->
-	<head>
+<!-- Header Information -->
+<head>
 	<meta charset="UTF-8">
 	<title>ALC Robotics</title>
 	<link href="css/style.css" rel="stylesheet">
@@ -13,11 +13,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	</head>
-	
+</head>
 <!-- Website Body -->
-	<body>
-		
+<body>	
 <!-- Navbar -->
 <nav id="navbar">
   <ul class="navbar-items flexbox-col">
@@ -77,7 +75,6 @@
     </li>
   </ul>
 </nav>
-
 <!-- Main -->
 <main id="main" class="flexbox-col">
   <!-- ALChemists Bubbler Box -->
@@ -109,10 +106,28 @@
     </svg>
     <script src="javascript/morphText.js"></script>
   </div>
+  <!-- FRC Logo, Mission Statement, Info Snippet -->
+  <div class="aboutsnippet">
+    <!-- Logo -->
+    <div class="frclogo">
+      <img width="40%" src="images/media/FIRSTRobotics_IconVert_RGB.png" alt="FIRST Robotics Competition">
+    </div>
+    <!-- Mission Statements -->
+    <div class="mission-description-box">
+      <div class="mission">
+        <b>Our Mission:</b>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+      </div>
+      <div class="quickfacts">
+        <b>About us:</b>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+      </div>
+    </div>
+  </div>
   <!-- Event Grid title -->
-  <br />
-  <h1>Upcoming Events & Meetings:</h1> 
-  <br />
+  <div class="eventdivider">
+    <h1 id="dividertitle">Upcoming Events & Meetings:</h1> 
+  </div>
   <!-- Calendar & Countdown Responsive Grid -->
   <div class="responsive_events">
     <!-- Countdown to the Next Important Event -->
@@ -254,7 +269,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2023  
+          <p class="copyright-text">Copyright &copy; <script>document.write(new Date().getFullYear())</script>  
        <a href="#">ALC Robotics</a>. <a href="https://www.nebo.edu/pubpolicy/"> [District Policy & Non-Discrimination Notice] </a>
           </p>
         </div>

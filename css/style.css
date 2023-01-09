@@ -364,7 +364,7 @@ select {
 #main {
     font-family: var(--font-main);
     margin: 0 0 0 4.25em;
-    min-height: 50vh;
+    /* min-height: 50vh; */
 }
 #image {
     margin: 2rem;
@@ -406,7 +406,7 @@ select {
     filter: url(#threshold) blur(0.6px);
 }
 #text1, #text2 {
-    top: 60%;
+    top: 70%;
     position: absolute;
     width: 100%;
     display: inline-block;
@@ -520,7 +520,51 @@ animation-delay:4s;
     transform:translateX(-200px);
 }
 }
-
+/* FRC Logo, Mission Statement, etc. */
+.aboutsnippet {
+    width: 100%;
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.frclogo {
+    /* position: relative; */
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mission-description-box {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 5%;
+}
+.mission {
+    height: 50%;
+    padding: 4%;
+}
+.quickfacts {
+    height: 50%;
+    padding: 4%;
+}
+b {
+    font-family: Dosis, sans-serif!important;
+}
+.eventdivider {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+#dividertitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* Video Player */
 #videoPlayer {
     background-color: #000;
@@ -1107,5 +1151,8 @@ animation-delay:4s;
     }
     #text1, #text2 {
         top: 80%;
+    }
+    .aboutsnippet {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

@@ -5,8 +5,8 @@ const elts = {
 
 const texts = ["Team 3405", "The ALChemists"];
 
-const morphTime = 3;
-const cooldownTime = 2.5;
+const morphTime = 2;
+const cooldownTime = 3;
 
 let textIndex = texts.length - 1;
 let time = new Date();
