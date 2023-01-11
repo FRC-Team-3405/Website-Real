@@ -565,6 +565,43 @@ b {
     align-items: center;
     justify-content: center;
 }
+.mainpitch {
+    width: 100%;
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+.teamphoto {
+    margin: 0;
+    height: 380px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pitch-box {
+    width: 100%;
+    height: 380px;
+    align-items: center;
+    padding: 5%;
+}
+.pitch {
+    height: 75%;
+    padding: 4%;
+}
+.joinbutton {
+    height: 25%;
+    padding-left: 4%;
+}
+#joinusbutton {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    background-color: hsl(var(--alc-blue));
+    color: white;
+    border-radius: 5px;
+    align-items: center;
+}
 /* Video Player */
 #videoPlayer {
     background-color: #000;
@@ -1153,6 +1190,10 @@ b {
         top: 80%;
     }
     .aboutsnippet {
+        grid-template-columns: repeat(1, 1fr);
+        height: 760px;
+    }
+    .mainpitch {
         grid-template-columns: repeat(1, 1fr);
         height: 760px;
     }
