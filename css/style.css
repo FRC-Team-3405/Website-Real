@@ -594,6 +594,8 @@ b {
     padding-left: 4%;
 }
 #joinusbutton {
+    display: flex;
+    position: relative;
     width: 100%;
     height: 100%;
     padding: 2px;
@@ -601,6 +603,7 @@ b {
     color: white;
     border-radius: 5px;
     align-items: center;
+    justify-content: center;
 }
 /* Video Player */
 #videoPlayer {
