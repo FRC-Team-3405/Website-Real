@@ -571,13 +571,16 @@ b {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
 }
-.teamphoto {
+.teamphotobox {
     margin: 0;
     height: 380px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.teamphoto {
+    max-width: 55%;
 }
 .pitch-box {
     width: 100%;
@@ -669,6 +672,9 @@ b {
   #videoPlayer.loaded:after {
     display: none;
   }
+  .recruit-image {
+    max-width: 60%;
+  }
 /* Calendar & Countdown Responsive Grid */
 .responsive_events {
     max-width: 100%;
@@ -713,6 +719,9 @@ b {
 .emoji span {
     font-size: 4rem;
     padding: 0 .5rem;
+}
+.styled-calendar-container {
+    min-height: 450px;
 }
 @media all and (max-width: 768px) {
     .clockList {
@@ -1126,6 +1135,9 @@ b {
     }
     .responsive_events {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .teamphoto {
+        max-width: 75%;
     }
 }
 @media only screen and (max-width: 1456px) {
