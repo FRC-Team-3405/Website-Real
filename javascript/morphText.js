@@ -3,7 +3,7 @@ const elts = {
     text2: document.getElementById("text2")
 };
 
-const texts = ["Team 3405", "The ALChemists"];
+const texts = ["Team 3405!", "The ALChemists", "Season 2024"];
 
 const morphTime = 2;
 const cooldownTime = 3;

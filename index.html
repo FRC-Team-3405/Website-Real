@@ -45,7 +45,19 @@
       <span id="text1"></span>
       <span id="text2"></span>
     </div>
-    <!-- SVG -->
+      <script src="/javascript/TextMorpher.js"></script>
+      <script>
+          // Example of implementation
+          const elements = {
+              text1: document.getElementById("text1"),
+              text2: document.getElementById("text2")
+          };
+      
+          const customTexts = ["Team 3405", "The ALChemists"];
+      
+          const morpher = new TextMorpher(elements, customTexts, 1.5, 2.5);
+      </script>
+      <!-- SVG -->
     <svg id="filters">
       <defs>
         <filter id="threshold">
@@ -53,10 +65,9 @@
         </filter>
       </defs>
     </svg>
-    <script src="javascript/morphText.js"></script>
   </div>
   <!-- FRC Logo, Mission Statement, Info Snippet -->
-  <div class="aboutsnippet">
+  <div class="dividedContent">
     <!-- Logo -->
     <div class="frclogo">
       <img width="40%" src="images/media/FIRSTRobotics_IconVert_RGB.png" alt="FIRST Robotics Competition">
