@@ -1051,6 +1051,9 @@ b {
     text-align: right;
 }
 .ribbon span {
+    --ribbon-colorA: #2989d8;
+    --ribbon-colorB: #385CA8;
+
     font-size: 10px;
     font-weight: bold;
     color: #FFF;
@@ -1062,29 +1065,173 @@ b {
     width: 100px;
     display: block;
     background: #79A70A;
-    background: linear-gradient(#2989d8 0%, #385CA8 100%);
+    background: linear-gradient(var(--ribbon-colorA) 0%, var(--ribbon-colorB) 100%);
     box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
     position: absolute;
     top: 19px; right: -21px;
 }
+
 .ribbon span::before {
     content: "";
     position: absolute; left: 0px; top: 100%;
     z-index: -1;
-    border-left: 3px solid #385CA8;
+    border-left: 3px solid var(--ribbon-colorB);
     border-right: 3px solid transparent;
     border-bottom: 3px solid transparent;
-    border-top: 3px solid #385CA8;
+    border-top: 3px solid var(--ribbon-colorB);
 }
 .ribbon span::after {
     content: "";
     position: absolute; right: 0px; top: 100%;
     z-index: -1;
     border-left: 3px solid transparent;
-    border-right: 3px solid #385CA8;
+    border-right: 3px solid var(--ribbon-colorB);
     border-bottom: 3px solid transparent;
-    border-top: 3px solid #385CA8;
+    border-top: 3px solid var(--ribbon-colorB);
 }
+
+
+
+.ribbonb {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 20;
+    overflow: hidden;
+    width: 150px; height: 150px;
+    text-align: right;
+}
+.ribbonb span {
+    --ribbon-colorA: #2989d8;
+    --ribbon-colorB: #385CA8;
+
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 160px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(var(--ribbon-colorA) 0%, var(--ribbon-colorB) 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 40px; right: -28px;
+}
+
+.ribbonb span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid var(--ribbon-colorB);
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid var(--ribbon-colorB);
+}
+.ribbonb span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid var(--ribbon-colorB);
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid var(--ribbon-colorB);
+}
+
+.ribbon.red span{
+    --ribbon-colorA: #ff0000;
+    --ribbon-colorB: #cc5c00;
+}
+
+.ribbon.green span{
+    --ribbon-colorA: #00ff15;
+    --ribbon-colorB: #00cc55;
+}
+.ribbon.gold span{
+    --ribbon-colorA: #ffbb00;
+    --ribbon-colorB: #ccbe00;
+}
+
+.ribbon.pink span{
+    --ribbon-colorA: #d400ff;
+    --ribbon-colorB: #cc00aa;
+}
+
+.ribbon.skyblue span{
+    --ribbon-colorA: #00d9ff;
+    --ribbon-colorB: #007acc;
+}
+
+.ribbon.turquoise span{
+    --ribbon-colorA: #00ffaa;
+    --ribbon-colorB: #00cc4e;
+}
+
+.ribbon.darkblue span{
+    --ribbon-colorA: #0059ff;
+    --ribbon-colorB: #1f00cc;
+}
+
+.ribbon.purple span{
+    --ribbon-colorA: #8400ff;
+    --ribbon-colorB: #8b00cc;
+}
+
+.ribbon.orange span{
+    --ribbon-colorA: #ff6600;
+    --ribbon-colorB: #cc8b00;
+}
+
+/* ribbonb colors */
+.ribbonb.red span{
+    --ribbon-colorA: #ff0000;
+    --ribbon-colorB: #cc5c00;
+}
+
+.ribbonb.green span{
+    --ribbon-colorA: #00ff15;
+    --ribbon-colorB: #00cc55;
+}
+.ribbonb.gold span{
+    --ribbon-colorA: #ffbb00;
+    --ribbon-colorB: #ccbe00;
+}
+
+.ribbonb.pink span{
+    --ribbon-colorA: #d400ff;
+    --ribbon-colorB: #cc00aa;
+}
+
+.ribbonb.skyblue span{
+    --ribbon-colorA: #00d9ff;
+    --ribbon-colorB: #007acc;
+}
+
+.ribbonb.turquoise span{
+    --ribbon-colorA: #00ffaa;
+    --ribbon-colorB: #00cc4e;
+}
+
+.ribbonb.darkblue span{
+    --ribbon-colorA: #0059ff;
+    --ribbon-colorB: #1f00cc;
+}
+
+.ribbonb.purple span{
+    --ribbon-colorA: #8400ff;
+    --ribbon-colorB: #8b00cc;
+}
+
+.ribbonb.orange span{
+    --ribbon-colorA: #ff6600;
+    --ribbon-colorB: #cc8b00;
+}
+
+
+
+
 .card-cropped {
     object-fit: cover;
     width: 100%;
