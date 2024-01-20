@@ -5,7 +5,7 @@
           day = hour * 24;
   
         //   CHANGE THE DATE BELOW
-    kickoff = "04/25/2023 10:00 AM";
+    kickoff = "02/28/2024 7:00 AM";
     // CHANGE THE DATE ABOVE
     
     const countDown = new Date(kickoff).getTime(),
@@ -21,7 +21,7 @@
   
           //do something later when date is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "It's Recruiting Day!";
+            document.getElementById("headline").innerText = "Competition Time!";
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
