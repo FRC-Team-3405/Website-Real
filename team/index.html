@@ -41,9 +41,41 @@
 
 <!-- Main -->
 <main id="main" class="flexbox-col">
-  <div class="header-container">
+  <div class="dividedContent backgray" style="height: auto;">
+    <div>
       <img src="../images/media/Team2022.jpg" alt="2022 Team" style="width:100%;">
-      <div class="header-container-text">Are you ready?</div>
+    </div>
+    <div>
+      <div class="bubble-box" style="height: auto; "><!-- TEXT -->
+        <div id="morph-text">
+          <span id="text1"></span>
+          <span id="text2"></span>
+        </div>
+          <script src="/javascript/TextMorpher.js"></script>
+          <script>
+              // Example of implementation
+              const elements = {
+                  text1: document.getElementById("text1"),
+                  text2: document.getElementById("text2")
+              };
+          
+              const customTexts = ["Were Team 3405", "The ALChemists"];
+          
+              const morpher = new TextMorpher(elements, customTexts, 1.5, 2.5);
+          </script>
+          <!-- SVG -->
+        <svg id="filters">
+          <defs>
+            <filter id="threshold">
+              <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 255 -140" />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      <div class="backgray basicTxtBox" style="height: auto;">
+        <p class="basicTxt" style="color: white;">The ALChemists are a FIRST Robotics Team located at Nebo's Advanced Learning Center in Salem, Utah. They began as the Golden Eagle Bots at Maple Mountain High School in 2010 under the direction of Mr. Robert Eastmond. The team was an FRC Utah Regional Finalist their rookie year and have since been regional finalists three times (2011, 2014, and 2015, respectively). The program has expanded to allow participation of all students in Nebo School District and regularly participates in school and community events. in 2024, Eastmond left on a service mission for the Church of Jesus Christ of Latter Day Saints, and the program is now being mentored my Ms. Park</p>
+      </div>
+    </div>
   </div>
 
   <!-- Coaches & Mentors Section Header -->
