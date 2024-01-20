@@ -984,7 +984,7 @@ b {
 {
   background-color:#3b5998
 }
-.social-icons a.twitter:hover
+.social-icons a.instagram:hover
 {
   background-color:#E1306C
 }
@@ -992,9 +992,17 @@ b {
 {
   background-color:#007bb6
 }
-.social-icons a.dribbble:hover
+.social-icons a.github:hover
 {
   background-color:#333
+}
+.social-icons a.youtube:hover
+{
+  background-color:#e00000
+}
+.social-icons a.reddit:hover
+{
+  background-color:#FF5414
 }
 @media (max-width:767px)
 {
@@ -1022,9 +1030,9 @@ b {
 }
 /* TEAM PAGE */
 .cards {
-    width: 70%;
+    width: 80%;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 15px;
     padding: 5px;
@@ -1070,6 +1078,9 @@ b {
     position: absolute;
     top: 19px; right: -21px;
 }
+.ribbon.blacktext span{
+    color: #000;
+}
 
 .ribbon span::before {
     content: "";
@@ -1088,6 +1099,15 @@ b {
     border-right: 3px solid var(--ribbon-colorB);
     border-bottom: 3px solid transparent;
     border-top: 3px solid var(--ribbon-colorB);
+}
+
+.ribbon.rleft{
+    left: -5px; top: -5px;
+}
+.ribbon.rleft span{
+    top: 19px; left: -21px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 
@@ -1120,6 +1140,9 @@ b {
     position: absolute;
     top: 40px; right: -28px;
 }
+.ribbonb.blacktext span{
+    color: #000;
+}
 
 .ribbonb span::before {
     content: "";
@@ -1138,6 +1161,15 @@ b {
     border-right: 3px solid var(--ribbon-colorB);
     border-bottom: 3px solid transparent;
     border-top: 3px solid var(--ribbon-colorB);
+}
+
+.ribbonb.rleft{
+    left: -5px; top: -5px;
+}
+.ribbonb.rleft span{
+    top: 40px; left: -28px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 .ribbon.red span{
