@@ -26,6 +26,62 @@
 </nav>
 <!-- Main -->
 <main id="main" class="flexbox-col">
+    <!-- ALChemists Bubbler Box -->
+    <div class="bubble-box">
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+      <!-- TEXT -->
+      <div id="morph-text">
+        <span id="text1"></span>
+        <span id="text2"></span>
+      </div>
+        <script src="/javascript/TextMorpher.js"></script>
+        <script>
+            // Example of implementation
+            const elements = {
+                text1: document.getElementById("text1"),
+                text2: document.getElementById("text2")
+            };
+        
+            const customTexts = ["Team 3405", "ARCHIVES"];
+        
+            const morpher = new TextMorpher(elements, customTexts, 1.5, 2.5);
+        </script>
+        <!-- SVG -->
+      <svg id="filters">
+        <defs>
+          <filter id="threshold">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 255 -140" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <!-- Archives Info -->
+    <div class="dividedContent">
+        <!-- Team Photo -->
+        <div>
+            <div class="basicTxt">
+                <h2>The Archives</h2>
+                <p>See archived versions of this webstie,</p>
+            </div>
+        </div>
+        <!-- Elevator Pitch -->
+        <div class="basicTxtBox">
+            <div class="joinbutton">
+                <a href="pre2024/" id="joinusbutton">pre 2024 archive</a>
+            </div>
+        </div>
+    </div>
 </main>
 </body>
 </html>

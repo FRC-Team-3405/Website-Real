@@ -1,0 +1,184 @@
+<html>
+<body>
+<canvas id="stars"></canvas>
+<div id="landscape"></div>
+
+<!-- image credit: NYC Skyline Silhouette by Diego Torres Silvestre - Wikimedia Commons -->
+
+<!-- Originally forked from Patrick Stillheart's 'night sky' pen on codepen.io Has been modified from the original-->
+<style>
+    @import 'https://fonts.googleapis.com/css?family=Comfortaa:300|Orbitron|Roboto:100';
+    body {
+    //background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #7db9e8 100%);
+        background:linear-gradient(to bottom, #000 0%, #002 50%, #004 100%);
+        height: 100vh;
+        margin: 0;
+    }
+    #stars {
+        top: 0;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+    #landscape {
+        top: 0;
+        position: absolute;
+        background:url("NYC_Skyline_Silhouette.png");
+        /*background:url("images/deepspacelogo.png");*/
+        background-size: 100% 100%;
+        width: 100vw;
+        height: 100vh;
+    }
+    h1 {
+        /*font-family: 'Comfortaa', cursive;*/
+        /*font-family: 'Roboto', sans-serif;*/
+        font-family: 'Orbitron', sans-serif;
+        font-size: 4em;
+        font-weight:100;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 20px hsla(0,100%,100%,0.3);
+        margin: 0;
+        padding-top: 5%;
+    }
+    h2 {
+        color:white;
+        font-family:'Roboto', sans-serif;
+        font-weight:100;
+        font-size:12px;
+        position:absolute;
+        bottom:0;
+        right:0;
+    }
+    a {
+
+    }
+</style>
+<script>
+    'use strict';
+    let canvas = document.getElementById('stars');
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    let ctx = canvas.getContext('2d');
+    ctx.lineWidth = 0.4;
+    ctx.imageSmoothingEnabled = false;
+    const PI2 = 2 * Math.PI;
+    let bounds = {
+        top: -10,
+        left: -10,
+        right: canvas.width + 10,
+        bottom: canvas.height + 10
+    };
+    let center = {
+        x: Math.floor(canvas.width / 2),
+        y: Math.floor(canvas.height / 2)
+    };
+    let connectArea = {
+        destX: center.x,
+        destY: center.y,
+        x: center.x,
+        y: center.y
+    };
+    function updateConnectArea() {
+        let distX = connectArea.destX - connectArea.x;
+        if (distX > 5 || distX < 5) connectArea.x += Math.floor(distX / 10);
+        let distY = connectArea.destY - connectArea.y;
+        if (distX > 5 || distX < 5) connectArea.y += Math.floor(distY / 10);
+    }
+    let dots = {
+        nb: Math.floor(canvas.width / 10),
+        distMax: 100,
+        connectAreaRadius: 100,
+        array: []
+    };
+    function Dot() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random()) / 15;
+        this.vy = (Math.random()) / 15;
+        this.radius = Math.random() * 2;
+    }
+    Dot.prototype = {
+        draw: function() {
+            ctx.beginPath();
+            ctx.fillStyle = '#fff';
+            ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
+            ctx.fill();
+        }
+    };
+    function moveDots() {
+        for (let i = 0; i < dots.nb; i++) {
+            let dot = dots.array[i];
+            if (dot.y > bounds.bottom) dot.y = bounds.top;
+            else if (dot.x > bounds.right) dot.x = bounds.left;
+            dot.x += dot.vx;
+            dot.y += dot.vy;
+        }
+    }
+    function connectDots() {
+        for (let i = 0; i < dots.nb; i++) {
+            for (let j = 0; j < dots.nb; j++) {
+                if (i === j) continue;
+                let dot1 = dots.array[i],
+                    dot2 = dots.array[j];
+                let xDiff = dot1.x - dot2.x,
+                    yDiff = dot1.y - dot2.y;
+                let xCoreDiff = dot1.x - connectArea.x,
+                    yCoreDiff = dot1.y - connectArea.y;
+                if ((xDiff < dots.distMax && xDiff > -dots.distMax) &&
+                    (yDiff < dots.distMax && yDiff > -dots.distMax) &&
+                    (xCoreDiff < dots.connectAreaRadius && xCoreDiff > -dots.connectAreaRadius) &&
+                    (yCoreDiff < dots.connectAreaRadius && yCoreDiff > -dots.connectAreaRadius)) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = 'hsla(0,100%,100%,0.5)';
+                    ctx.moveTo(dot1.x + 0.0, dot1.y + 0.0);
+                    ctx.lineTo(dot2.x + 0.0, dot2.y + 0.0);
+                    ctx.stroke();
+                    ctx.closePath();
+                }
+            }
+        }
+    }
+    function createDots() {
+        for (let i = 0; i < dots.nb; i++) dots.array.push(new Dot());
+    }
+    function drawDots() {
+        for (let i = 0; i < dots.nb; i++) dots.array[i].draw();
+    }
+    function animateDots() {
+        requestAnimationFrame(animateDots);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // updateConnectArea();
+        moveDots();
+        // connectDots();
+        drawDots();
+    }
+    document.body.addEventListener('mousemove', function(e) {
+        connectArea.destX = e.pageX;
+        connectArea.destY = e.pageY;
+    });
+    document.body.addEventListener('mouseleave', function(e) {
+        connectArea.destX = center.x;
+        connectArea.destY = center.y;
+    });
+    window.addEventListener('resize', function(e) {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        bounds.right = canvas.width - 1,
+            bounds.bottom = canvas.height - 1;
+        ctx.lineWidth = 0.4;
+        center = {
+            x: Math.floor(canvas.width / 2),
+            y: Math.floor(canvas.height / 2)
+        };
+        connectArea.destX = center.x;
+        connectArea.destY = center.y;
+        dots.nb = Math.floor(canvas.width / 17);
+        dots.array.length = 0;
+        createDots();
+    });
+    createDots();
+    animateDots();
+</script>
+</body>
+</html>
