@@ -386,6 +386,7 @@ select {
     width: 100%;
     cursor: pointer;
     text-align: center;
+    position: relative;
 }
 .navbar-item-inner {
     padding: 1em 0;
@@ -440,6 +441,65 @@ select {
     text-decoration: none;
 }
 
+/* Submenu Styles */
+.navbar-item {
+   position: relative; /* Set position to relative for proper positioning of the submenu */
+}
+
+.submenu {
+   display: none;
+   position: absolute;
+   width:  auto;
+   top: 100%;
+   left: 20%; /* Position the submenu to the right of the parent */
+   width: auto; /* Set width to auto so it only takes the necessary space */
+   background-color: hsl(var(--background-secondary));
+   box-shadow: 0 17px 30px -10px hsla(var(--black), .25);
+   z-index: 101; /* Place it above the main navbar */
+}
+
+.navbar-item:hover .submenu {
+   display: flex; /* Show submenu items in a row */
+   flex-direction: column; /* Stack submenu items vertically */
+   position: absolute; /* Adjust position for flex display */
+}
+
+.submenu li {
+   list-style: none; /* Hide the list bullet point */
+   width: 100%;
+   text-align: center;
+}
+
+.submenu ul {
+    padding-left: 100px;
+    padding-inline-start: 10px;
+}
+
+.submenu a {
+   display: flex; /* Use flexbox for layout */
+   align-items: center; /* Center vertically */
+   padding: 15px;
+   color: hsl(var(--quite-gray));
+   text-decoration: none;
+   transition: all .2s cubic-bezier(var(--transition-main), 1);
+}
+
+.submenu a i {
+   margin-right: 8px; /* Adjust the margin as needed */
+}
+
+.submenu a span {
+   flex-grow: 1; /* Allow the text to take up remaining space */
+   overflow: hidden; /* Hide any overflow */
+}
+
+.submenu a:hover {
+   color: hsl(var(--white));
+   background: hsl(var(--background-secondary-light));
+}
+
+
+
 /* ======
     Main
    ====== */
@@ -482,6 +542,7 @@ select {
 }
 #morph-text {
     margin: auto;
+    vertical-align: center;
     width: 100%;
     height: 50%;
     top: 0;
