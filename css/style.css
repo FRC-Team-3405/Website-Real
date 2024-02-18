@@ -243,6 +243,68 @@ select {
     visibility: visible;
 }
 
+.largeTitle {
+    font-size: 80px;
+}
+
+.blueBack {
+    background-color: #007acc;
+}
+
+.header {
+    padding: 50px;
+    width: 100%;
+}
+
+.header h1{
+    text-align: center;
+}
+
+/* slider */
+
+logo-slider {
+/*   $min-image-size: 50px;
+  $max-image-size: 100px;
+  --image-size: #{$max-image-size}; */
+  border: 1px solid #575757;
+  padding: 0px;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+	height: auto;
+  margin: 0;	
+	position: relative;
+	display: flex;
+}
+logo-slider div { 
+		display: flex;
+		position: relative;
+		animation: marquee 10s linear infinite;
+    justify-content: space-around;
+		
+    
+    /* You may need this if there are too few images for the banner width
+    min-width:100%; */
+    
+}
+
+logo-slider tr {
+	width: 100px;
+}
+
+@keyframes marquee {
+	0%   { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}
+
+logo-slider .sponsor-feature{
+    width: 25vw;
+}
+
+logo-slider #id-sponsors {
+    width: 200px;
+}
+
 /* =========
     Classes
    ========= */
