@@ -26,6 +26,72 @@
 </nav>
 <!-- Main -->
 <main id="main" class="flexbox-col">
+  <div class="blueBack header">
+    <h1 class="largeTitle"><strong>We are looking for sponsors!</strong></h1>
+  </div>
+  <div class="dividedContent">
+    <div>
+      <img src="/images/media/walleclose.jpg" alt="">
+    </div>
+    <div>
+      <div class="basicTxtBlock">
+        <p class="basicTxt">
+          Support our team! and get your name on this site, and our robot!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <logo-slider id="top" class="backgray">
+		<div id="pt1">
+			<table>
+				<tr>
+					<td>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature">
+                <a href="https://www.nebo.edu/">
+                <img id="sponsor-logo" alt="Nebo School District" src="/images/sponsors/NSD_logo.png"/></div>
+                </a>
+              </div>
+					</td>
+					<td>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature">
+                <a href="https://alc.nebo.edu/">
+                <img id="sponsor-logo" alt="Nebo's Advanced Learning Center" src="/images/sponsors/ALC_logo.png"/></div>
+                </a>
+              </div>
+					</td>
+          <td>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature">
+                <a href="">
+                <img id="sponsor-logo" alt="CentraCom" src="/images/sponsors/CentraCom-blue.png"/></div>
+                </a>
+              </div>
+          </td>
+          <td>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature">
+                <a href="">
+                <img id="sponsor-logo-vertical" alt="The Gene Haas Foundation" src="/images/sponsors/GeneHaas.png"/></div>
+                </a>
+              </div>
+          </td>
+				</tr>
+			</table>
+		</div>
+		<script>
+			// Get the element
+			var elem = document.querySelector('#pt1');
+			// Create a copy of it
+			var clone = elem.cloneNode(true);
+			// Update the ID
+			clone.id = 'pt2';
+			// Inject it into the DOM
+			elem.after(clone);
+		</script>
+	</logo-slider>
 </main>
 </body>
 </html>
