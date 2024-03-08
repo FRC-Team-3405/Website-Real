@@ -560,6 +560,11 @@ logo-slider #id-sponsors {
    background: hsl(var(--background-secondary-light));
 }
 
+.PDF {
+    width: 100%;
+    height: 50vw;
+}
+
 
 
 /* ======
