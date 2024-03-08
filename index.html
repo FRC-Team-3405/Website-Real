@@ -17,63 +17,12 @@
 <!-- Website Body -->
 <body>	
 <!-- Navbar -->
+<script>
+  $(function () {
+    $("#navbar").load("nav.html");
+  });
+</script>
 <nav id="navbar">
-  <ul class="navbar-items flexbox-col">
-    <li class="navbar-logo flexbox-left">
-      <a class="navbar-item-inner flexbox">
-        <img src="images/branding/logonotriangle.svg" alt="ALC Robotics">
-      </a>
-      <span class="name-text">The ALChemists</span>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="javascript:void(0)">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-house"></i>
-        </div>
-        <span class="link-text">Home</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="projects/index.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-folder-open"></i>
-        </div>
-        <span class="link-text">Our Projects</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-book-open-reader"></i>
-        </div>
-        <span class="link-text">Resources</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="team/index.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-        <span class="link-text">About Us</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="join/index.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-handshake"></i>
-        </div>
-        <span class="link-text">Join</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-hand-holding-dollar"></i>
-        </div>
-        <span class="link-text">Sponsor</span>
-      </a>
-    </li>
-  </ul>
 </nav>
 <!-- Main -->
 <main id="main" class="flexbox-col">
@@ -96,7 +45,19 @@
       <span id="text1"></span>
       <span id="text2"></span>
     </div>
-    <!-- SVG -->
+      <script src="/javascript/TextMorpher.js"></script>
+      <script>
+          // Example of implementation
+          const elements = {
+              text1: document.getElementById("text1"),
+              text2: document.getElementById("text2")
+          };
+      
+          const customTexts = ["Team 3405", "The ALChemists"];
+      
+          const morpher = new TextMorpher(elements, customTexts, 1.5, 2.5);
+      </script>
+      <!-- SVG -->
     <svg id="filters">
       <defs>
         <filter id="threshold">
@@ -104,10 +65,9 @@
         </filter>
       </defs>
     </svg>
-    <script src="javascript/morphText.js"></script>
   </div>
   <!-- FRC Logo, Mission Statement, Info Snippet -->
-  <div class="aboutsnippet">
+  <div class="dividedContent">
     <!-- Logo -->
     <div class="frclogo">
       <img width="40%" src="images/media/FIRSTRobotics_IconVert_RGB.png" alt="FIRST Robotics Competition">
@@ -136,7 +96,7 @@
     <div class="mainPageCountdown">
       <div class="countdownClock">
         <div class="clock-container">
-          <h1 id="headline">SFJHS RECRUITING DAY</h1>
+          <h1 id="headline">Idaho Regional Competition</h1>
           <div id="countdown">
             <ul class="clockList">
               <li class="clockList"><span id="days"></span>Days</li>
@@ -152,6 +112,9 @@
           </div>
         </div>
       </div>
+      <div class="basicTxtBox">
+        <h2 class="basicTxt">Weekly Meetings on Tuseday and Wednesday after school</h2>
+      </div>
     </div>
     <!-- Change the countdown date in the file below -->
     <script src="javascript/countdown.js"></script>
@@ -164,10 +127,10 @@
   <br />
   <br />
   <!-- Elevator Pitch -->
-  <div class="mainpitch">
+  <div class="dividedContent">
     <!-- Team Photo -->
     <div class="teamphotobox">
-      <img width="70%" class ="teamphoto" src="images/media/Team2022.jpg" alt="FIRST Robotics Competition">
+      <img width="70%" class ="teamphoto" src="images/media/Team2024.jpg" alt="FIRST Robotics Competition">
     </div>
     <!-- Elevator Pitch -->
     <div class="pitch-box">
@@ -203,40 +166,56 @@
           <div class="row">
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
+                <a href="https://www.nebo.edu/">
                 <img id="sponsor-logo" alt="Nebo School District" src="images/sponsors/NSD_logo.png"/></div>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-              <div class="sponsor-feature">
-                <img id="sponsor-logo" alt="Nebo's Advanced Learning Center" src="images/sponsors/ALC_logo.png"/></div>
+                </a>
               </div>
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
-                <img id="sponsor-logo" alt="CentraCom" src="images/sponsors/CentraCom-blue.png"/></div>
-            </div>
+                <a href="https://alc.nebo.edu/">
+                <img id="sponsor-logo" alt="Nebo's Advanced Learning Center" src="images/sponsors/ALC_logo.png"/></div>
+                </a>
+              </div>
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
+                <a href="">
+                <img id="sponsor-logo" alt="CentraCom" src="images/sponsors/CentraCom-blue.png"/></div>
+                </a>
+              </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="sponsor-feature">
+                <a href="">
                 <img id="sponsor-logo-vertical" alt="The Gene Haas Foundation" src="images/sponsors/GeneHaas.png"/></div>
-            </div>
+                </a>
+              </div>
           </div>
         </div>
         <div class="item">
           <div class="row">
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
+                <a href="">
                 <img id="sponsor-logo" alt="Department of Defense STEM Initiative" src="images/sponsors/Full_Color_DoDSTEM_Logo.png" /></div>
-            </div>
+                </a>
+              </div>
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
+                <a href="">
                 <img id="sponsor-logo-vertical" alt="Nebo's Bottle CAPS Bus" src="images/sponsors/bottle-CAPS.png" style="width: 160px;" /></div>
-            </div>
+                </a>
+              </div>
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
+                <a href="">
                 <img id="sponsor-logo-vertical" alt="Nebo's CAPS Program" src="images/sponsors/nebo-caps.png" style="width: 160px;" /></div>
-            </div>
+                </a>
+              </div>
             <div class="col-sm-3 col-xs-6">
               <div class="sponsor-feature">
+                <a href="">
                 <img id="sponsor-logo" alt="YOUR BUSINESS HERE: See Sponsor page!" src="images/sponsors/sponsor-us.png" style="width: 160px;" /></div>
-            </div>
+                </a>
+              </div>
           </div>
         </div>
       </div>
@@ -251,29 +230,29 @@
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h6>About</h6>
-          <p class="text-justify">The ALChemists are a FIRST Robotics Team located at Nebo's Advanced Learning Center in Salem, Utah. They began as the Golden Eagle Bots at Maple Mountain High School in 2010 under the direction of Mr. Robert Eastmond. The team was an FRC Utah Regional Finalist their rookie year and have since been regional finalists three times (2011, 2014, and 2015, respectively). The program has expanded to allow participation of all students in Nebo School District and regularly participates in school and community events. </p>
+          <p class="text-justify">The ALChemists are a FIRST Robotics Team located at Nebo's Advanced Learning Center in Salem, Utah. They began as the Golden Eagle Bots at Maple Mountain High School in 2010 under the direction of Mr. Robert Eastmond. The team was an FRC Utah Regional Finalist their rookie year and have since been regional finalists three times (2011, 2014, and 2015, respectively). The program has expanded to allow participation of all students in Nebo School District and regularly participates in school and community events. in 2024, Eastmond left on a service mission for the Church of Jesus Christ of Latter Day Saints, and the program is now being mentored my Ms. Park</p>
         </div>
 
         <div class="col-xs-6 col-md-3">
           <h6>Resources</h6>
           <ul class="footer-links">
-            <li><a href="http://scanfcode.com/category/c-language/">Programming</a></li>
-            <li><a href="http://scanfcode.com/category/front-end-development/">Engineering</a></li>
-            <li><a href="http://scanfcode.com/category/back-end-development/">Marketing</a></li>
-            <li><a href="http://scanfcode.com/category/java-programming-language/">Scout Team</a></li>
-            <li><a href="http://scanfcode.com/category/templates/">Alumni</a></li>
-            <li><a href="http://scanfcode.com/category/android/">Parents</a></li>
-            <li><a href="http://scanfcode.com/category/templates/">Mentors</a></li>
+            <li><a href="/projects/Sub Pages/Programming.html">Programming</a></li>
+            <li><a href="/projects/Sub Pages/Programming.html">Engineering</a></li>
+            <li><a href="/projects/Sub Pages/Programming.html">Marketing</a></li>
+            <li><a href="h/projects/Sub Pages/Programming.html">Scout Team</a></li>
+            <li><a href="/projects/Sub Pages/Programming.html">Alumni</a></li>
+            <li><a href="/projects/Sub Pages/Programming.html">Parents</a></li>
+            <li><a href="/projects/Sub Pages/Programming.html">Mentors</a></li>
           </ul>
         </div>
 
         <div class="col-xs-6 col-md-3">
           <h6>Quick Links</h6>
           <ul class="footer-links">
-            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Join our Team</a></li>
-            <li><a href="http://scanfcode.com/privacy-policy/">Sponsor Us</a></li>
+            <li><a href="/team/">About Us</a></li>
+            <li><a href="mailto:team3405@gmail.com">Contact Us</a></li>
+            <li><a href="/join/">Join our Team</a></li>
+            <li><a href="/sponsor/">Sponsor Us</a></li>
             <li><a href="http://scanfcode.com/sitemap/">Our Mission</a></li>
             <li><a href="#">Press Releases</a></li>
             <li><a href="https://www.nebo.edu/">Nebo School District</a></li>
@@ -293,8 +272,8 @@
         <div class="col-md-4 col-sm-6 col-xs-12">
           <ul class="social-icons">
             <li><a class="facebook" href="https://www.facebook.com/AdvancedLearningCenterALC/" target="new"><i class="fa fa-facebook"></i></a></li>
-            <li><a class="twitter" href="https://www.instagram.com/alcrobotics/" target="new"><i class="fa fa-instagram"></i></a></li>
-            <li><a class="dribbble" href="https://www.github.com/FRC-Team-3405/" target="new"><i class="fa fa-github"></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/alcrobotics/" target="new"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="github" href="https://www.github.com/FRC-Team-3405/" target="new"><i class="fa fa-github"></i></a></li>
             <li><a class="linkedin" href="https://www.linkedin.com/school/nebo-advanced-learning-center/" target="new"><i class="fa fa-linkedin"></i></a></li>   
           </ul>
         </div>
@@ -304,3 +283,5 @@
 </main>
 </body>
 </html>
+<!-- my brother wanted to type in here, so he did this: -->
+<!-- hello i am a daniel and i am a person man and type in text box of code with the cool <these things> and the /these things\ and whatnot thank you for listening i will be leaving now -->

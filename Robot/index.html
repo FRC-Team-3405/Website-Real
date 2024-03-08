@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header Information -->
+<head>
+  <meta charset="UTF-8">
+  <title>ALC Robotics</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="icon" type="/image/x-icon" href="/images/global/favicon.ico">
+  <script src="https://kit.fontawesome.com/4c31a4ea6b.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!-- Website Body -->
+<body>	
+<!-- Navbar -->
+<script>
+  $(function () {
+    $("#navbar").load("/nav.html");
+  });
+</script>
+<nav id="navbar">
+</nav>
+<!-- Main -->
+<main id="main" class="flexbox-col">
+
+    <h1 class="head">Meet our robot</h1>
+
+  <div class="dividedContent">
+    <div>
+      <img src="/images/media/GLaDOScomp.jpg" alt="" width="90%">
+    </div>
+    <div>
+      <div class="basicTxtBlock">
+        <h1 class="basicTxt">
+          GLaDOS
+        </h1>
+        <p>
+            GLaDOS is a small, Light weight robot, built for the 2024 First Robotics Competition season "Crescendo ''. 
+            The drive base is a swerve drive, mk4i from SDS, with 8 falcon 500 motors. Built with a small frame perimeter,
+            22 inches, and lightweight parts. Our bot was the lightest at the Utah Regional competition, weighing only 70 pounds!
+            Our robot features a over the bumper intake system with rollers powered by 5:1 775 pro motors, and actuation achieved
+            by a 125:1 NEO motor. The intake folds out to the ground to pick up the notes, and features a limit switch to detect
+            when a note has been picked up allowing it to automatically retract. The intake feeds directly into our launcher,
+            featuring 2 sets of stealth wheels powered by 3:1 NEO motors. Our robot includes 2 cameras, a back facing standard
+            camera for note pickup. and a front facing Limelight camera for april tag detection and automatic alignment.
+            Programmed in Java, we use  2 controllers, a main movement controller done with a flightstick with wrist rotation,
+            and a secondary subsystems controller to enable our intake and launcher systems. For autonomous we use PathPlanner
+            to allow us to customize our autonomous routines as our teammates need. We have been able to refine our main route
+            and can constantly get 2-3 notes, and have a star autonomous with 4 note capability. </p>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>

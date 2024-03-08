@@ -160,6 +160,151 @@ select {
     outline: none;
 }
 
+/* Template classes */
+
+
+.dividedContent {
+    width: 100%;
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.photobox {
+    margin: 0;
+    height: 380px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo {
+    max-width: 55%;
+}
+.basicTxtBox {
+    width: 100%;
+    height: 380px;
+    align-items: center;
+    padding: 5%;
+}
+.basicTxt {
+    height: 75%;
+    padding: 4%;
+}
+.blueButton {
+    padding-left: 4%;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    background-color: hsl(var(--alc-blue));
+    color: white;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.moreSpace {
+    margin: 10%;
+}
+.archiveFrame {
+    width: 100%;
+    height: 100vh;
+    /* margin: 1%; */
+    border-color: #007bb6;
+}
+
+.backgray {
+    background-color: #34343C;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+  
+  /* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.largeTitle {
+    font-size: 80px;
+}
+
+.blueBack {
+    background-color: #007acc;
+}
+
+.header {
+    padding: 50px;
+    width: 100%;
+}
+
+.header h1{
+    text-align: center;
+}
+
+/* slider */
+
+logo-slider {
+/*   $min-image-size: 50px;
+  $max-image-size: 100px;
+  --image-size: #{$max-image-size}; */
+  border: 1px solid #575757;
+  padding: 0px;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+	height: auto;
+  margin: 0;	
+	position: relative;
+	display: flex;
+}
+logo-slider div { 
+		display: flex;
+		position: relative;
+		animation: marquee 10s linear infinite;
+    justify-content: space-around;
+		
+    
+    /* You may need this if there are too few images for the banner width
+    min-width:100%; */
+    
+}
+
+logo-slider tr {
+	width: 100px;
+}
+
+@keyframes marquee {
+	0%   { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}
+
+logo-slider .sponsor-feature{
+    width: 25vw;
+}
+
+logo-slider #id-sponsors {
+    width: 200px;
+}
+
 /* =========
     Classes
    ========= */
@@ -303,6 +448,7 @@ select {
     width: 100%;
     cursor: pointer;
     text-align: center;
+    position: relative;
 }
 .navbar-item-inner {
     padding: 1em 0;
@@ -357,6 +503,70 @@ select {
     text-decoration: none;
 }
 
+/* Submenu Styles */
+.navbar-item {
+   position: relative; /* Set position to relative for proper positioning of the submenu */
+}
+
+.submenu {
+   display: none;
+   position: absolute;
+   width:  auto;
+   top: 100%;
+   left: 20%; /* Position the submenu to the right of the parent */
+   width: auto; /* Set width to auto so it only takes the necessary space */
+   background-color: hsl(var(--background-secondary));
+   box-shadow: 0 17px 30px -10px hsla(var(--black), .25);
+   z-index: 101; /* Place it above the main navbar */
+}
+
+.navbar-item:hover .submenu {
+   display: flex; /* Show submenu items in a row */
+   flex-direction: column; /* Stack submenu items vertically */
+   position: absolute; /* Adjust position for flex display */
+}
+
+.submenu li {
+   list-style: none; /* Hide the list bullet point */
+   width: 100%;
+   text-align: center;
+}
+
+.submenu ul {
+    padding-left: 100px;
+    padding-inline-start: 10px;
+}
+
+.submenu a {
+   display: flex; /* Use flexbox for layout */
+   align-items: center; /* Center vertically */
+   padding: 15px;
+   color: hsl(var(--quite-gray));
+   text-decoration: none;
+   transition: all .2s cubic-bezier(var(--transition-main), 1);
+}
+
+.submenu a i {
+   margin-right: 8px; /* Adjust the margin as needed */
+}
+
+.submenu a span {
+   flex-grow: 1; /* Allow the text to take up remaining space */
+   overflow: hidden; /* Hide any overflow */
+}
+
+.submenu a:hover {
+   color: hsl(var(--white));
+   background: hsl(var(--background-secondary-light));
+}
+
+.PDF {
+    width: 100%;
+    height: 50vw;
+}
+
+
+
 /* ======
     Main
    ====== */
@@ -399,11 +609,13 @@ select {
 }
 #morph-text {
     margin: auto;
+    vertical-align: center;
     width: 100%;
-    height: 200px;
+    height: 50%;
     top: 0;
     bottom: 0;
     filter: url(#threshold) blur(0.6px);
+    /* background-color: #0059ff; */
 }
 #text1, #text2 {
     top: 70%;
@@ -673,7 +885,7 @@ b {
     display: none;
   }
   .recruit-image {
-    max-width: 60%;
+    max-width: 100%;
   }
 /* Calendar & Countdown Responsive Grid */
 .responsive_events {
@@ -905,7 +1117,7 @@ b {
 {
   background-color:#3b5998
 }
-.social-icons a.twitter:hover
+.social-icons a.instagram:hover
 {
   background-color:#E1306C
 }
@@ -913,9 +1125,17 @@ b {
 {
   background-color:#007bb6
 }
-.social-icons a.dribbble:hover
+.social-icons a.github:hover
 {
   background-color:#333
+}
+.social-icons a.youtube:hover
+{
+  background-color:#e00000
+}
+.social-icons a.reddit:hover
+{
+  background-color:#FF5414
 }
 @media (max-width:767px)
 {
@@ -943,9 +1163,9 @@ b {
 }
 /* TEAM PAGE */
 .cards {
-    width: 70%;
+    width: 80%;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 15px;
     padding: 5px;
@@ -972,6 +1192,9 @@ b {
     text-align: right;
 }
 .ribbon span {
+    --ribbon-colorA: #2989d8;
+    --ribbon-colorB: #385CA8;
+
     font-size: 10px;
     font-weight: bold;
     color: #FFF;
@@ -983,29 +1206,197 @@ b {
     width: 100px;
     display: block;
     background: #79A70A;
-    background: linear-gradient(#2989d8 0%, #385CA8 100%);
+    background: linear-gradient(var(--ribbon-colorA) 0%, var(--ribbon-colorB) 100%);
     box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
     position: absolute;
     top: 19px; right: -21px;
 }
+.ribbon.blacktext span{
+    color: #000;
+}
+
 .ribbon span::before {
     content: "";
     position: absolute; left: 0px; top: 100%;
     z-index: -1;
-    border-left: 3px solid #385CA8;
+    border-left: 3px solid var(--ribbon-colorB);
     border-right: 3px solid transparent;
     border-bottom: 3px solid transparent;
-    border-top: 3px solid #385CA8;
+    border-top: 3px solid var(--ribbon-colorB);
 }
 .ribbon span::after {
     content: "";
     position: absolute; right: 0px; top: 100%;
     z-index: -1;
     border-left: 3px solid transparent;
-    border-right: 3px solid #385CA8;
+    border-right: 3px solid var(--ribbon-colorB);
     border-bottom: 3px solid transparent;
-    border-top: 3px solid #385CA8;
+    border-top: 3px solid var(--ribbon-colorB);
 }
+
+.ribbon.rleft{
+    left: -5px; top: -5px;
+}
+.ribbon.rleft span{
+    top: 19px; left: -21px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+
+.ribbonb {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 20;
+    overflow: hidden;
+    width: 150px; height: 150px;
+    text-align: right;
+}
+.ribbonb span {
+    --ribbon-colorA: #2989d8;
+    --ribbon-colorB: #385CA8;
+
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 160px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(var(--ribbon-colorA) 0%, var(--ribbon-colorB) 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 40px; right: -28px;
+}
+.ribbonb.blacktext span{
+    color: #000;
+}
+
+.ribbonb span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid var(--ribbon-colorB);
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid var(--ribbon-colorB);
+}
+.ribbonb span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid var(--ribbon-colorB);
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid var(--ribbon-colorB);
+}
+
+.ribbonb.rleft{
+    left: -5px; top: -5px;
+}
+.ribbonb.rleft span{
+    top: 40px; left: -28px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.ribbon.red span{
+    --ribbon-colorA: #ff0000;
+    --ribbon-colorB: #cc5c00;
+}
+
+.ribbon.green span{
+    --ribbon-colorA: #00ff15;
+    --ribbon-colorB: #00cc55;
+}
+.ribbon.gold span{
+    --ribbon-colorA: #ffbb00;
+    --ribbon-colorB: #ccbe00;
+}
+
+.ribbon.pink span{
+    --ribbon-colorA: #d400ff;
+    --ribbon-colorB: #cc00aa;
+}
+
+.ribbon.skyblue span{
+    --ribbon-colorA: #00d9ff;
+    --ribbon-colorB: #007acc;
+}
+
+.ribbon.turquoise span{
+    --ribbon-colorA: #00ffaa;
+    --ribbon-colorB: #00cc4e;
+}
+
+.ribbon.darkblue span{
+    --ribbon-colorA: #0059ff;
+    --ribbon-colorB: #1f00cc;
+}
+
+.ribbon.purple span{
+    --ribbon-colorA: #8400ff;
+    --ribbon-colorB: #8b00cc;
+}
+
+.ribbon.orange span{
+    --ribbon-colorA: #ff6600;
+    --ribbon-colorB: #cc8b00;
+}
+
+/* ribbonb colors */
+.ribbonb.red span{
+    --ribbon-colorA: #ff0000;
+    --ribbon-colorB: #cc5c00;
+}
+
+.ribbonb.green span{
+    --ribbon-colorA: #00ff15;
+    --ribbon-colorB: #00cc55;
+}
+.ribbonb.gold span{
+    --ribbon-colorA: #ffbb00;
+    --ribbon-colorB: #ccbe00;
+}
+
+.ribbonb.pink span{
+    --ribbon-colorA: #d400ff;
+    --ribbon-colorB: #cc00aa;
+}
+
+.ribbonb.skyblue span{
+    --ribbon-colorA: #00d9ff;
+    --ribbon-colorB: #007acc;
+}
+
+.ribbonb.turquoise span{
+    --ribbon-colorA: #00ffaa;
+    --ribbon-colorB: #00cc4e;
+}
+
+.ribbonb.darkblue span{
+    --ribbon-colorA: #0059ff;
+    --ribbon-colorB: #1f00cc;
+}
+
+.ribbonb.purple span{
+    --ribbon-colorA: #8400ff;
+    --ribbon-colorB: #8b00cc;
+}
+
+.ribbonb.orange span{
+    --ribbon-colorA: #ff6600;
+    --ribbon-colorB: #cc8b00;
+}
+
+
+
+
 .card-cropped {
     object-fit: cover;
     width: 100%;
@@ -1041,7 +1432,7 @@ b {
 /* "JOIN" PAGE */
 .joinHeader {
     width: 100%;
-    height: 300px;
+    height: 200px;
     display: flex;
     background: hsl(var(--alc-blue));
     color: #fff;

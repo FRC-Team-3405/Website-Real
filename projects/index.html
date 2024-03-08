@@ -24,69 +24,20 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="icon" type="image/x-icon" href="../images/global/favicon.ico">
   <script src="https://kit.fontawesome.com/4c31a4ea6b.js" crossorigin="anonymous"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	</head>
 	
 <!-- Website Body -->
 	<body>
 		
 <!-- Navbar -->
+<script>
+  $(function () {
+    $("#navbar").load("/nav.html");
+  });
+</script>
 <nav id="navbar">
-  <ul class="navbar-items flexbox-col">
-    <li class="navbar-logo flexbox-left">
-      <a class="navbar-item-inner flexbox">
-        <img src="../images/branding/logonotriangle.svg" alt="ALC Robotics">
-      </a>
-      <span class="name-text">The ALChemists</span>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="../index.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-house"></i>
-        </div>
-        <span class="link-text">Home</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="#">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-folder-open"></i>
-        </div>
-        <span class="link-text">Our Projects</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="#">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-book-open-reader"></i>
-        </div>
-        <span class="link-text">Resources</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="../team/index.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-        <span class="link-text">Team</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="../join/index.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-handshake"></i>
-        </div>
-        <span class="link-text">Join</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="#">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="fa-solid fa-hand-holding-dollar"></i>
-        </div>
-        <span class="link-text">Sponsor</span>
-      </a>
-    </li>
-  </ul>
 </nav>
 
 <!-- Main -->
