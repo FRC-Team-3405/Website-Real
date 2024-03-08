@@ -5,7 +5,7 @@
           day = hour * 24;
   
         //   CHANGE THE DATE BELOW
-    kickoff = "02/28/2024 7:00 AM";
+    kickoff = "03/21/2024 8:00 AM";
     // CHANGE THE DATE ABOVE
     
     const countDown = new Date(kickoff).getTime(),
